@@ -2,103 +2,119 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="./style/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Кто хочет стать программистом</title>
+    <link rel="stylesheet" href="./styles/style.css">
   </head>
   <body>
 
-    <header class="header">
-      <div id="timer_inp">60</div>
+    <main id="page"></main>
 
-      <div class="round50 round-style round-style1"><p>50/50</p></div>
-      <div class="round round-style round-style2"><p>МНЕНИЕ ЗАЛА</p></div>
-      <div class="round round-style round-style3"><p>ЗВОНОК ДРУГУ</p></div>
-      <div class="roundEnd round-style round-style4"><p>ЗАКОНЧИТЬ ИГРУ</p></div>
-    </header>
+    <div class="main">
+      <header class="header">
+        <div id="timer_inp">60</div>
+        <div class="help">
 
-    <main>
-      <section class="wrap1">
-        <h3 class="question"></h3>
-        <input class="answer-input" type="radio" name="answer" id="answer1" value="0">
-        <label for="answer1" class="answer-label"></label><br>
-        <input class="answer-input" type="radio" name="answer" id="answer2" value="1">
-        <label for="answer2" class="answer-label"></label><br>
-        <input class="answer-input" type="radio" name="answer" id="answer3" value="2">
-        <label for="answer3" class="answer-label"></label><br>
-        <input class="answer-input" type="radio" name="answer" id="answer4" value="3">
-        <label for="answer4" class="answer-label"></label><br>
+          <div class="icon_1"><a href="#" id="help1" class=""></a></div>
+          <div class="icon_2"><a href="#" id="help2" class=""></a></div>
+          <div class="icon_3"><a href="#" id="help3" class=""></a></div>
+        </div>
+      </header>
 
-        <input type="button" class="btn" value="ПОДТВЕРДИТЬ">
-      </section>
+      <div class="clear"></div>
+
       <section class="wrap2">
         <table>
           <tr class="tr">
             <td>Senior Developer</td>
           </tr>
           <tr>
-            <td>14</td>
+            <td>14 вопрос</td>
           </tr>
           <tr>
-            <td>13</td>
+            <td>13 вопрос</td>
           </tr>
           <tr>
-            <td>12</td>
+            <td>12 вопрос</td>
           </tr>
           <tr>
-            <td>11</td>
+            <td>11 вопрос</td>
           </tr>
           <tr class="tr">
             <td>Developer</td>
           </tr>
           <tr>
-            <td>9</td>
+            <td>9 вопрос</td>
           </tr>
           <tr>
-            <td>8</td>
+            <td>8 вопрос</td>
           </tr>
           <tr>
-            <td>7</td>
+            <td>7 вопрос</td>
           </tr>
           <tr>
-            <td>6</td>
+            <td>6 вопрос</td>
           </tr>
           <tr class="tr">
             <td>Junior Developer</td>
           </tr>
           <tr>
-            <td>4</td>
+            <td>4 вопрос</td>
           </tr>
           <tr>
-            <td>3</td>
+            <td>3 вопрос</td>
           </tr>
           <tr>
-            <td>2</td>
+            <td>2 вопрос</td>
           </tr>
           <tr>
-            <td>1</td>
+            <td>1 вопрос</td>
           </tr>
         </table>
       </section>
-    </main>
-
+      <div id="question_answer">
+        <div class="question">
+        </div>
+        <div class="top_ans">
+          <div class="ans_1"><a href="#" type="button" id="a" class="answer"></a></div>
+          <div class="ans_2"><a href="#" type="button" id="b" class="answer"></a></div>
+          <div class="clear"></div>
+        </div>
+        <div class="bot_ans">
+          <div class="ans_1"><a href="#" type="button" id="c" class="answer"></a></div>
+          <div class="ans_2"><a href="#" type="button" id="d" class="answer"></a></div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
     <div class="start">
       <form action="">
         <input type="text" id="user" name="user" required placeholder="Введите Ваше имя">
         <input type="submit" id="start">
       </form>
     </div>
-
+    <div class="winner">
+      <div class="winner-wrap">
+        <h1>ИГРА ОКОНЧЕНА</h1>
+        <h3 class="showResult">ВЫ ПРОИГРАЛИ </h3>
+        <input type="button" class="buttons" value="Вернуться к главному меню" onclick="switchToStart()">
+      </div>
+    </div>
     <div class="end">
-      <h1>ИГРА ОКОНЧЕНА</h1>
-      <h3 class="showResult">ВЫ ПРОИГРАЛИ </h3>
+      <div class="end-wrap">
+        <h1>ИГРА ОКОНЧЕНА</h1>
+        <h3 class="showResult">ВЫ ПРОИГРАЛИ </h3>
+        <input type="button" class="buttons" value="Вернуться к главному меню" onclick="switchToStart()">
+      </div>
     </div>
 
     <div class="reStart">
       <h1 class="hellow"></h1>
       <button id="startGame">НАЧАТЬ ИГРУ</button>
     </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="scripts/jquery-3.4.1.min.js"></script>
+    <script src="scripts/spa.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/script.js"></script>
   </body>
 </html>
