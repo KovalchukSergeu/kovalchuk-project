@@ -3,8 +3,8 @@ window.onhashchange = renderNewState;
   Основная функция по управлению SPA на странице
  */
 function renderNewState() {
-  var hash = window.location.hash;
-  var state = decodeURIComponent(hash.substr(1));
+  let hash = window.location.hash;
+  let state = decodeURIComponent(hash.substr(1));
   if (state === '') { // если пустой значит мы зашли в первый раз
     state = {
       page: 'main'
@@ -12,7 +12,7 @@ function renderNewState() {
   } else {
     state = JSON.parse(state); // иначе пробуем парсить состояние
   }
-  var page = '';
+  let page = '';
 
   switch (state.page) {
     case 'main':
@@ -49,7 +49,7 @@ function renderNewState() {
       page += '<input type="button" class="buttons" value="Вернуться к главному меню" onclick="switchToStart()">';
       page += '<table class="tableRecords">';
       page += `<tr class="table-cell"><th class="table-cell">Игрок</th><th class="table-cell">Уровень</th></tr>`;
-      for (var i = 0; i < resultArray.length; i++) {
+      for (let i = 0; i < resultArray.length; i++) {
         page += `<tr class="table-cell"><td class="table-cell" id="igrok">${resultArray[i].name}</td><td class="table-cell" id="itog">${resultArray[i].level}</td></tr>`;
       }
       page += '</table>';
@@ -96,7 +96,7 @@ function switchToRecords() {
 renderNewState();
 
 // Список вопросов
-var question = [
+const question = [
   'Какие конструкции для циклов есть в javascript?',
   'Какая функция используется, если нужно спросить пользователя о чем-то \n и принять ответ "да" или "нет"?',
   'Укажите синтаксически неправильный вариант создания массива.',
@@ -115,7 +115,7 @@ var question = [
 ];
 
 // Варианты ответов
-var answer = [
+const answer = [
   'Только две: for и while.', 'Три: for, while и do...while.', 'Только одна: for.', 'Четыре: for, while, do..while и do..it',
   'eval()', 'prompt()', 'alert()', 'confirm()',
   'var a = new Array(1,2,3);', 'var a = [1,2,3];', 'var a = new Array();', 'var a = new [1,2,3];',
@@ -134,7 +134,7 @@ var answer = [
 ];
 
 // Ключи для ответов
-var key = [
+const key = [
   'Три: for, while и do...while.',
   'confirm()',
   'var a = new [1,2,3];',
@@ -151,9 +151,9 @@ var key = [
   'The execution stack is empty',
   'Function.bind()'];
 // Текущий уровень
-var level = 0;
+let level = 0;
 // Аудио для проигрования во время раунда
-var audioRound = new Audio('./audio/round.mp3');
+let audioRound = new Audio('./audio/round.mp3');
 
 // Основная функция вставки вопросов и ответов в блоки
 
@@ -169,7 +169,7 @@ function show(level) {
 }
 
 // Обработка счетчика очков
-var tr = $('tr');
+let tr = $('tr');
 $(tr[tr.length - (level + 1)]).css('color', 'white');
 
 // Обработка кликов по правильным/непавильным ответам
@@ -234,7 +234,7 @@ function trueAnswer() {
   $('#true-answer').css('display', 'block');
   level++;
   show(level);
-  var audioStartGame = new Audio('./audio/next-question.mp3');
+  let audioStartGame = new Audio('./audio/next-question.mp3');
   audioStartGame.play();
 }
 
@@ -273,14 +273,14 @@ Math.rand = function (min, max) {
 };
 
 // Функция подсказки 50/50
-var audioHelp = new Audio('./audio/help.mp3');
-var inputLink = document.getElementById('question_answer').getElementsByTagName('a');
+let audioHelp = new Audio('./audio/help.mp3');
+let inputLink = document.getElementById('question_answer').getElementsByTagName('a');
 $('#help1').click(function () {
-  var inputAnswer = document.getElementsByClassName('answer');
-  var exp = [];
-  var count = 0;
+  let inputAnswer = document.getElementsByClassName('answer');
+  let exp = [];
+  let count = 0;
   while (count < 2) {
-    var index = Math.rand(0, 3);
+    let index = Math.rand(0, 3);
     if (exp.indexOf(index) == -1 && inputAnswer[index].text != key[level]) {
       $(inputLink[index]).text('');
       count++;
@@ -312,7 +312,7 @@ function win() {
 
   $('.winner').css('display', 'block');
   audioRound.pause();
-  var audioWinGame = new Audio('./audio/win.mp3');
+  let audioWinGame = new Audio('./audio/win.mp3');
   audioWinGame.play();
   saveResult();
 }
@@ -325,7 +325,7 @@ function gameOwer() {
 // Запуск таймера и проверки на состояние игры и отратного отсчета
 function timerGame() {
 
-  var objTimer = document.getElementById('timer_inp');
+  let objTimer = document.getElementById('timer_inp');
   objTimer.innerHTML--;
 
   if (objTimer.innerHTML == 0) {
