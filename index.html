@@ -68,7 +68,7 @@
             <td>2 вопрос</td>
           </tr>
           <tr>
-            <td>1 вопрос</td>
+            <td class="first-td">1 вопрос</td>
           </tr>
         </table>
       </section>
@@ -87,17 +87,65 @@
         </div>
       </div>
     </div>
-    <div class="start">
-      <form action="">
-        <input type="text" id="user" name="user" required placeholder="Введите Ваше имя">
-        <input type="submit" id="start">
-      </form>
-    </div>
+    <section class="wrap1">
+      <table>
+        <tr class="tr">
+          <td>Senior Developer</td>
+        </tr>
+        <tr>
+          <td>14 вопрос</td>
+        </tr>
+        <tr>
+          <td>13 вопрос</td>
+        </tr>
+        <tr>
+          <td>12 вопрос</td>
+        </tr>
+        <tr>
+          <td>11 вопрос</td>
+        </tr>
+        <tr class="tr">
+          <td>Developer</td>
+        </tr>
+        <tr>
+          <td>9 вопрос</td>
+        </tr>
+        <tr>
+          <td>8 вопрос</td>
+        </tr>
+        <tr>
+          <td>7 вопрос</td>
+        </tr>
+        <tr>
+          <td>6 вопрос</td>
+        </tr>
+        <tr class="tr">
+          <td>Junior Developer</td>
+        </tr>
+        <tr>
+          <td>4 вопрос</td>
+        </tr>
+        <tr>
+          <td>3 вопрос</td>
+        </tr>
+        <tr>
+          <td>2 вопрос</td>
+        </tr>
+        <tr>
+          <td class="first-td">1 вопрос</td>
+        </tr>
+      </table>
+    </section>
     <div class="winner">
       <div class="winner-wrap">
         <h1>ИГРА ОКОНЧЕНА</h1>
-        <h3 class="showResult">ВЫ ПРОИГРАЛИ </h3>
+        <h3 class="showResult">Вы выиграли! Поздравляем! <br> Вы можете занимать Senior Developer позицию =)</h3>
         <input type="button" class="buttons" value="Вернуться к главному меню" onclick="switchToStart()">
+      </div>
+    </div>
+    <div id="true-answer">
+      <div class="true-wrap">
+        <h1>И это правильный ответ!</h1>
       </div>
     </div>
     <div class="end">
@@ -107,14 +155,7 @@
         <input type="button" class="buttons" value="Вернуться к главному меню" onclick="switchToStart()">
       </div>
     </div>
-
-    <div class="reStart">
-      <h1 class="hellow"></h1>
-      <button id="startGame">НАЧАТЬ ИГРУ</button>
-    </div>
     <script src="scripts/jquery-3.4.1.min.js"></script>
-    <script src="scripts/spa.js"></script>
-    <script src="scripts/main.js"></script>
     <script src="scripts/script.js"></script>
   </body>
 </html>
