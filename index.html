@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Кто хочет стать программистом</title>
+    <link rel="stylesheet" href="./styles/style.css">
+  </head>
+  <body>
+
+    <main id="page"></main>
+
+    <div class="main">
+      <header class="header">
+        <div id="timer_inp">60</div>
+        <div class="help">
+
+          <div class="icon_1"><a href="#" id="help1" class=""></a></div>
+          <div class="icon_2"><a href="#" id="help2" class=""></a></div>
+          <div class="icon_3"><a href="#" id="help3" class=""></a></div>
+        </div>
+      </header>
+
+      <div class="clear"></div>
+
+      <section class="wrap2">
+        <table>
+          <tr class="tr">
+            <td>Senior Developer</td>
+          </tr>
+          <tr>
+            <td>14 вопрос</td>
+          </tr>
+          <tr>
+            <td>13 вопрос</td>
+          </tr>
+          <tr>
+            <td>12 вопрос</td>
+          </tr>
+          <tr>
+            <td>11 вопрос</td>
+          </tr>
+          <tr class="tr">
+            <td>Developer</td>
+          </tr>
+          <tr>
+            <td>9 вопрос</td>
+          </tr>
+          <tr>
+            <td>8 вопрос</td>
+          </tr>
+          <tr>
+            <td>7 вопрос</td>
+          </tr>
+          <tr>
+            <td>6 вопрос</td>
+          </tr>
+          <tr class="tr">
+            <td>Junior Developer</td>
+          </tr>
+          <tr>
+            <td>4 вопрос</td>
+          </tr>
+          <tr>
+            <td>3 вопрос</td>
+          </tr>
+          <tr>
+            <td>2 вопрос</td>
+          </tr>
+          <tr>
+            <td class="first-td">1 вопрос</td>
+          </tr>
+        </table>
+      </section>
+      <div id="question_answer">
+        <div class="question">
+        </div>
+        <div class="top_ans">
+          <div class="ans_1"><a href="#" type="button" id="a" class="answer"></a></div>
+          <div class="ans_2"><a href="#" type="button" id="b" class="answer"></a></div>
+          <div class="clear"></div>
+        </div>
+        <div class="bot_ans">
+          <div class="ans_1"><a href="#" type="button" id="c" class="answer"></a></div>
+          <div class="ans_2"><a href="#" type="button" id="d" class="answer"></a></div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <section class="wrap1">
+      <table>
+        <tr class="tr">
+          <td>Senior Developer</td>
+        </tr>
+        <tr>
+          <td>14 вопрос</td>
+        </tr>
+        <tr>
+          <td>13 вопрос</td>
+        </tr>
+        <tr>
+          <td>12 вопрос</td>
+        </tr>
+        <tr>
+          <td>11 вопрос</td>
+        </tr>
+        <tr class="tr">
+          <td>Developer</td>
+        </tr>
+        <tr>
+          <td>9 вопрос</td>
+        </tr>
+        <tr>
+          <td>8 вопрос</td>
+        </tr>
+        <tr>
+          <td>7 вопрос</td>
+        </tr>
+        <tr>
+          <td>6 вопрос</td>
+        </tr>
+        <tr class="tr">
+          <td>Junior Developer</td>
+        </tr>
+        <tr>
+          <td>4 вопрос</td>
+        </tr>
+        <tr>
+          <td>3 вопрос</td>
+        </tr>
+        <tr>
+          <td>2 вопрос</td>
+        </tr>
+        <tr>
+          <td class="first-td">1 вопрос</td>
+        </tr>
+      </table>
+    </section>
+    <div class="winner">
+      <div class="winner-wrap">
+        <h1>ИГРА ОКОНЧЕНА</h1>
+        <h3 class="showResult">Вы выиграли! Поздравляем! <br> Вы можете занимать Senior Developer позицию =)</h3>
+        <input type="button" class="buttons" value="Вернуться к главному меню" onclick="switchToStart()">
+      </div>
+    </div>
+    <div id="true-answer">
+      <div class="true-wrap">
+        <h1>И это правильный ответ!</h1>
+      </div>
+    </div>
+    <div class="end">
+      <div class="end-wrap">
+        <h1>ИГРА ОКОНЧЕНА</h1>
+        <h3 class="showResult">ВЫ ПРОИГРАЛИ </h3>
+        <input type="button" class="buttons" value="Вернуться к главному меню" onclick="switchToStart()">
+      </div>
+    </div>
+    <script src="scripts/jquery-3.4.1.min.js"></script>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
